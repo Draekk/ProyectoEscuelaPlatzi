@@ -16,9 +16,17 @@ namespace ProyectoEscuelaPlatzi.Entidades
 
         public Escuela(string nombre, int año) => (Nombre, AñoDeCreacion) = (nombre, año);
 
+        public Escuela(string nombre, int año, TiposEscuela tipo, string Pais = "", string Ciudad = "")
+        {
+            Nombre = nombre;
+            AñoDeCreacion = año;
+            tiposEscuela = tipo;
+            this.Pais = Pais;
+            this.Ciudad = Ciudad;
+        }
         public override string ToString()
         {
-            return $"Nombre: {Nombre}, Tipo: {tiposEscuela}\nPais: {Pais}, Ciudad: {Ciudad}";
+            return $"Nombre: {Nombre}, Tipo: {tiposEscuela}{System.Environment.NewLine}Pais: {Pais}, Ciudad: {Ciudad}";
         }
     }
 }
