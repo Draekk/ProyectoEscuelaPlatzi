@@ -6,17 +6,28 @@ escuela.Pais = "Chile";
 escuela.Ciudad = "Curacaví";
 escuela.tiposEscuela = TiposEscuela.Primaria;
 
-var curso1 = new Curso(){
+var arregloCursos = new Curso[3];
+arregloCursos[0] = new Curso()
+{
     Nombre = "101"
 };
-var curso2 = new Curso(){
+arregloCursos[1] = new Curso()
+{
     Nombre = "201"
 };
-var curso3 = new Curso(){
+arregloCursos[2] = new Curso()
+{
     Nombre = "301"
 };
 Console.WriteLine(escuela);
-System.Console.WriteLine("================================");
-System.Console.WriteLine(curso1.Nombre + ", " + curso1.UniqueId);
-System.Console.WriteLine(curso2.Nombre + ", " + curso2.UniqueId);
-System.Console.WriteLine(curso3);
+System.Console.WriteLine("======================================");
+
+ImprimirCursos(arregloCursos);
+
+void ImprimirCursos(Curso[] arregloCursos)
+{
+    foreach (var curso in arregloCursos)
+    {
+        System.Console.WriteLine($"Nombre: {curso.Nombre}, ID: {curso.UniqueId}");
+    }
+}
