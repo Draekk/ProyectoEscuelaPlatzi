@@ -13,8 +13,8 @@ namespace ProyectoEscuelaPlatzi.Entidades
         public string Pais { get; set; }
         public string Ciudad { get; set; }
         public TiposEscuela tiposEscuela { get; set; }
-
         public Escuela(string nombre, int año) => (Nombre, AñoDeCreacion) = (nombre, año);
+        public List<Curso> Cursos { get;set;}
 
         public Escuela(string nombre, int año, TiposEscuela tipo, string Pais = "", string Ciudad = "")
         {
