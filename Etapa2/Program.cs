@@ -5,10 +5,13 @@ using static System.Console;
 EscuelaEngine eEngine = new EscuelaEngine();
 eEngine.Inicializar();
 
+Printer.EscribirTitulo("escuela platzi");
+
 WriteLine(eEngine.escuela);
-WriteLine("======================================");
+Printer.DibujarLinea(20);
 Interaccion(eEngine.escuela);
 ImprimirCursos(eEngine.escuela);
+Printer.DibujarLinea(20);
 
 
 void ImprimirCursos(Escuela escuela)

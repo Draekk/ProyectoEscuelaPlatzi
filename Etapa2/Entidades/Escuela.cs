@@ -2,6 +2,7 @@ namespace ProyectoEscuelaPlatzi.Entidades
 {
     public class Escuela
     {
+        public string UniqueId = Guid.NewGuid().ToString();
         private string nombre;
         public string Nombre{
             get{return nombre;}
