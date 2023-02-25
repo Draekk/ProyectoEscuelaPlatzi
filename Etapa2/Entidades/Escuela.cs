@@ -1,6 +1,6 @@
 namespace ProyectoEscuelaPlatzi.Entidades
 {
-    class Escuela
+    public class Escuela
     {
         private string nombre;
         public string Nombre{
