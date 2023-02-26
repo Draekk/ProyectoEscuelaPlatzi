@@ -9,7 +9,7 @@ Printer.EscribirTitulo("escuela platzi");
 
 WriteLine(eEngine.escuela);
 Printer.DibujarLinea(20);
-Interaccion(eEngine.escuela);
+//Interaccion(eEngine.escuela);
 ImprimirCursos(eEngine.escuela);
 Printer.DibujarLinea(20);
 

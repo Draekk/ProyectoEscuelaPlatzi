@@ -3,11 +3,22 @@ namespace ProyectoEscuelaPlatzi.Entidades
     public class Evaluaciones
     {
         public string UniqueId { get; private set; }
-        public string Nombre { get; set; }
-        public Alumno alumno { get; set; }
-        public Asignatura asignatura { get; set; }
-        public float Nota { get; set; }
+    
+        public Evaluaciones()
+        {
+            UniqueId = Guid.NewGuid().ToString();
+            
+        }
 
-        public Evaluaciones() => UniqueId = Guid.NewGuid().ToString();
+        public float[] GenerarNotas()
+        {
+            float[] notas = new float[5];
+            for (int i = 0; i < notas.Length; i++)
+            {
+                Random rnd = new Random();
+                notas[i] = (float)rnd.NextDouble() * 5.00001f;
+            }
+            return notas;
+        }
     }
 }
